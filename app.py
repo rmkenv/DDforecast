@@ -150,7 +150,7 @@ with tab1:
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
         margin=dict(t=40, b=40), height=400,
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 # ── tab 2: cumulative accumulation ───────────────────────────────────────────
 with tab2:
@@ -189,7 +189,7 @@ with tab2:
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
         margin=dict(t=40, b=40), height=420,
     )
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width="stretch")
 
 # ── tab 3: anomaly ────────────────────────────────────────────────────────────
 with tab3:
@@ -204,7 +204,7 @@ with tab3:
             fig3.add_hline(y=0, line_width=1, line_color="gray")
             fig3.update_layout(showlegend=False, height=320, margin=dict(t=20, b=40),
                                yaxis_title="HDD vs normal")
-            st.plotly_chart(fig3, use_container_width=True)
+            st.plotly_chart(fig3, width="stretch")
 
         with c2:
             st.caption("CDD anomaly vs 30-year normal")
@@ -214,7 +214,7 @@ with tab3:
             fig4.add_hline(y=0, line_width=1, line_color="gray")
             fig4.update_layout(showlegend=False, height=320, margin=dict(t=20, b=40),
                                yaxis_title="CDD vs normal")
-            st.plotly_chart(fig4, use_container_width=True)
+            st.plotly_chart(fig4, width="stretch")
 
         st.caption("Z-scores (standard deviations from 30-year mean)")
         fig5 = go.Figure()
@@ -226,7 +226,7 @@ with tab3:
         fig5.add_hrect(y0=-1, y1=1, fillcolor="rgba(0,0,0,0.04)", line_width=0)
         fig5.update_layout(height=280, margin=dict(t=20, b=40), yaxis_title="z-score",
                            legend=dict(orientation="h", y=1.1))
-        st.plotly_chart(fig5, use_container_width=True)
+        st.plotly_chart(fig5, width="stretch")
 
 # ── tab 4: daily table ────────────────────────────────────────────────────────
 with tab4:
